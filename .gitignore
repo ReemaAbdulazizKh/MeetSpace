@@ -13,11 +13,9 @@ MeetSpace_Presentation_Source_Pack.zip
 *.md
 !/AGENTS.md
 !/README.md
-!/docs/MeetSpace_BRD.md
-!/docs/MeetSpace_SPEC.md
+!/MeetSpace_BRD.md
+!/MeetSpace_SPEC.md
 /docs/*
-!/docs/MeetSpace_BRD.md
-!/docs/MeetSpace_SPEC.md
 /backend/tests/
 /frontend/checks/
 /design/
