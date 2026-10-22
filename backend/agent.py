@@ -6,7 +6,7 @@ from urllib.error import HTTPError
 from .config import OLLAMA_URL, MODEL, MODEL_PROVIDER, GROQ_API_KEY, GROQ_MODEL
 from .schemas import Extraction
 
-PROMPT_PATH = Path(__file__).parent / 'prompts' / 'booking_agent.md'
+PROMPT_PATH = Path(__file__).parent / 'prompts' / 'booking_agent.txt'
 
 
 class AgentUnavailable(Exception):

@@ -10,6 +10,10 @@ MeetSpace_Presentation_Source_Pack.zip
 /MeetSpace_Final_Presentation.pptx
 /MeetSpace_Final_Presentation.pdf
 /MeetSpace_Evidence_Checklist.md
+*.md
+!/AGENTS.md
+!/docs/MeetSpace_BRD.md
+!/docs/MeetSpace_SPEC.md
 /docs/presentation/
 /docs/evidence/capstone/rendered/
 /docs/evidence/capstone/contact_*.jpg
