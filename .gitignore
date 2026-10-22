@@ -12,8 +12,15 @@ MeetSpace_Presentation_Source_Pack.zip
 /MeetSpace_Evidence_Checklist.md
 *.md
 !/AGENTS.md
+!/README.md
 !/docs/MeetSpace_BRD.md
 !/docs/MeetSpace_SPEC.md
+/docs/*
+!/docs/MeetSpace_BRD.md
+!/docs/MeetSpace_SPEC.md
+/backend/tests/
+/frontend/checks/
+/design/
 /docs/presentation/
 /docs/evidence/capstone/rendered/
 /docs/evidence/capstone/contact_*.jpg
