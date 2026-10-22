@@ -29,3 +29,15 @@ class HostingTests(unittest.TestCase):
             headers={} if origin is None else {'Origin':origin}
             self.assertEqual(self.http.post('/api/action',auth=('reviewer','test-password-only'),headers=headers).status_code,403)
         self.assertEqual(self.http.post('/api/action',auth=('reviewer','test-password-only'),headers={'Origin':'https://demo.example'}).status_code,200)
+
+    def test_public_demo_still_rejects_cross_site_writes(self):
+        app=FastAPI()
+        @app.get('/')
+        def home():return {'public':True}
+        @app.post('/write')
+        def write():return {'ok':True}
+        app.add_middleware(DemoAccess,username='',password='',origin='https://demo.example',require_auth=False)
+        with TestClient(app) as http:
+            self.assertEqual(http.get('/').status_code,200)
+            self.assertEqual(http.post('/write',headers={'Origin':'https://other.example'}).status_code,403)
+            self.assertEqual(http.post('/write',headers={'Origin':'https://demo.example'}).status_code,200)

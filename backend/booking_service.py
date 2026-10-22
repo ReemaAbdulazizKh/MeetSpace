@@ -64,10 +64,12 @@ def check_room(room, attendees, requested_type, accepted_alternative=False):
         raise BookingError('room_type')
 
 
-def find_rooms(draft):
+def find_rooms(draft, employee_id=None):
     start, end = validate(draft)
     rooms = store.list_records('rooms')
     bookings = store.list_records('bookings')
+    if employee_id and overlap(start, end, [b for b in bookings if b.get('employee_id') == employee_id and b.get('status') == 'confirmed']):
+        raise BookingError('employee_conflict')
     options = []
     for room in rooms:
         try:

@@ -138,6 +138,7 @@ def commit_offer(employee_id, session_id, offer):
     employee_ref = db.collection('employees').document(employee_id)
     day_ref = db.collection('room_days').document(f"{offer.room.id}_{offer.date.replace('-', '')}")
     prior_query = db.collection('bookings').where(filter=FieldFilter('room_id', '==', offer.room.id))
+    employee_query = db.collection('bookings').where(filter=FieldFilter('employee_id', '==', employee_id))
 
     @firestore.transactional
     def commit(transaction):
@@ -155,6 +156,7 @@ def commit_offer(employee_id, session_id, offer):
         room = room_ref.get(transaction=transaction)
         day = day_ref.get(transaction=transaction)
         prior = list(prior_query.stream(transaction=transaction))
+        own_bookings = list(employee_query.stream(transaction=transaction))
         start, end = validate(offer_draft(offer))
         if not employee.exists:
             raise BookingError('employee')
@@ -168,11 +170,17 @@ def commit_offer(employee_id, session_id, offer):
         active = [item.to_dict() for item in prior if item.to_dict().get('status') == 'confirmed']
         if overlap(start, end, intervals) or overlap(start, end, active):
             raise BookingError('conflict')
+        if overlap(start, end, [item.to_dict() for item in own_bookings if item.to_dict().get('status') == 'confirmed']):
+            raise BookingError('employee_conflict')
         data = {'employee_id': employee_id, 'room_id': offer.room.id, 'session_id': session_id,
                 'offer_id': offer.offer_id, 'start_at': start, 'end_at': end,
                 'attendees': offer.attendees, 'requested_type': offer.requested_type,
                 'status': 'confirmed', 'created_at': firestore.SERVER_TIMESTAMP, 'canceled_at': None}
         transaction.create(booking_ref, data)
+        # Every confirmation reads AND writes the employee document. Concurrent
+        # bookings for this employee in different rooms must serialize/retry;
+        # the query above also covers existing bookings without new lock data.
+        transaction.update(employee_ref, {'booking_revision': offer.offer_id})
         transaction.set(day_ref, {'room_id': offer.room.id, 'day': offer.date,
                                  'active_intervals': intervals + [{'booking_id': offer.offer_id,
                                                                   'start_at': start, 'end_at': end}]}, merge=True)

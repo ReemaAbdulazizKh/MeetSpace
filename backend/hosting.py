@@ -6,8 +6,9 @@ from starlette.responses import PlainTextResponse
 
 
 class DemoAccess:
-    def __init__(self, app, username, password, origin):
+    def __init__(self, app, username, password, origin, require_auth=True):
         self.app, self.username, self.password, self.origin = app, username, password, origin
+        self.require_auth = require_auth
 
     async def __call__(self, scope, receive, send):
         if scope['type'] != 'http':
@@ -25,7 +26,7 @@ class DemoAccess:
                      and secrets.compare_digest(password.encode(), self.password.encode()))
         except (ValueError, UnicodeError, binascii.Error):
             pass
-        if not valid:
+        if self.require_auth and not valid:
             return await PlainTextResponse('Private educational demo. Sign in to continue.', status_code=401,
                 headers={'WWW-Authenticate': 'Basic realm="MeetSpace demo", charset="UTF-8"',
                          'Cache-Control': 'no-store'})(scope, receive, send)

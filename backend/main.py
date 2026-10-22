@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from .config import FRONTEND_ORIGIN, ROOT, HOSTED, DEMO_USERNAME, DEMO_PASSWORD
+from .config import FRONTEND_ORIGIN, ROOT, HOSTED, DEMO_USERNAME, DEMO_PASSWORD, REQUIRE_DEMO_AUTH
 from .hosting import DemoAccess
 from .routes import router
 
@@ -24,4 +24,4 @@ if HOSTED and not (dist / 'index.html').is_file():
 if dist.is_dir():
     app.mount('/', StaticFiles(directory=dist, html=True), name='frontend')
 if HOSTED:
-    app.add_middleware(DemoAccess, username=DEMO_USERNAME, password=DEMO_PASSWORD, origin=FRONTEND_ORIGIN)
+    app.add_middleware(DemoAccess, username=DEMO_USERNAME, password=DEMO_PASSWORD, origin=FRONTEND_ORIGIN, require_auth=REQUIRE_DEMO_AUTH)

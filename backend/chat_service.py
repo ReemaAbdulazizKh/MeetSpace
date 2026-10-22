@@ -3,8 +3,9 @@ from . import agent, booking_service as bookings
 from .schemas import ChatResponse
 
 MESSAGES = {
+    'employee_conflict': ('عندك حجز مؤكد يتداخل مع هذا الموعد، حتى لو اخترتِ قاعة ثانية. اختاري وقتًا آخر، أو راجعي حجزك الحالي في «تقويم حجوزاتي» وألغيه إذا ما عاد تحتاجينه، ثم نكمل طلبك.', 'You already have a confirmed booking during this time, even if you choose another room. Pick a different time, or review and cancel your existing booking in My calendar if you no longer need it.'),
     'no_offer': ('لا يوجد عرض صالح ينتظر التأكيد. اختاري قاعة من الخيارات أولًا.', 'There is no valid pending offer. Select a displayed room first.'),
-    'missing': ('أحتاج هذه التفاصيل فقط: ', 'I only need these details: '),
+    'missing': ('أكيد، نكمل تفاصيل طلبك. باقي لي منك: ', 'Happy to help! To complete your request, I just need: '),
     'date_time': ('التاريخ أو الوقت غير صالح. اكتبي تاريخًا واضحًا ووقتًا بنظام 24 ساعة.', 'The date or time is invalid. Provide an unambiguous date and 24-hour times.'),
     'single_day': ('يجب أن يبدأ الحجز وينتهي في اليوم نفسه بتوقيت الرياض؛ لا يمكن عبور منتصف الليل.', 'Bookings must start and end on the same Riyadh calendar day; overnight bookings are not supported.'),
     'end_time': ('وقت النهاية يجب أن يكون بعد البداية وفي اليوم نفسه. صححي الموعد.', 'End time must be later than start time on the same day. Please correct the time.'),
@@ -20,7 +21,7 @@ MESSAGES = {
     'ambiguous_confirmation': ('لم أستلم تأكيدًا صريحًا. راجعي العرض ثم اكتبي «أؤكد الحجز» أو استخدمي زر التأكيد.', 'I need explicit consent. Review the offer, then type “I confirm the booking” or use its confirmation button.'),
     'unsupported': ('المحادثة تدعم حجزًا واحدًا خلال يوم واحد فقط. الطلبات المتكررة أو المتعددة غير متاحة. يمكنك إلغاء حجوزاتك من تقويم حجوزاتي.', 'Chat supports one single-day booking only. Recurring or multiple bookings are not available. You can cancel your bookings from My calendar.'),
     'error': ('تعذر الوصول إلى Firestore. لم يتأكد تنفيذ أي حجز جديد؛ حاولي مجددًا.', 'Firestore could not be reached. No new booking is verified; please try again.'),
-    'model_error': ('تعذر فهم الرسالة عبر النموذج المحلي. لم يُنفذ حجز؛ أعيدي المحاولة.', 'The local model could not interpret the message. No booking was executed; please retry.'),
+    'model_error': ('ما قدرت أعالج رسالتك الآن؛ قد تكون خدمة النموذج مشغولة. ما نفذت أي حجز. جرّبي بعد قليل، وبنكمل من التفاصيل المتوفرة.', 'I couldn’t process your message right now; the model service may be busy. No booking was made. Please try again shortly and we’ll continue with your available details.'),
 }
 LABELS = {'room_type': ('نوع القاعة', 'room type'), 'date': ('التاريخ', 'date'),
           'start_time': ('وقت البداية مع صباحًا/مساءً', 'start time with AM/PM'),
@@ -61,7 +62,7 @@ def response(session, status, fallback, language, message='', missing=None, mode
 
 def offer_response(session, offer, language, message='', model=True):
     room = offer.room
-    fallback = ('راجعي العرض ثم أكدي صراحةً.' if language == 'ar' else 'Review this offer, then explicitly confirm.')
+    fallback = ('هذا عرض القاعة اللي اخترتِها. خذي راحتك في مراجعة التفاصيل؛ إذا ناسبتك اضغطي «تأكيد الحجز» أو اكتبي «أؤكد الحجز». الاختيار وحده ما يحجز القاعة.' if language == 'ar' else 'Here’s the room you chose. Take a moment to review the details, then confirm if everything looks right. Selecting a room alone does not book it.')
     fallback += f'\n{room.name[language]} · {offer.date} · {offer.start_time}–{offer.end_time} · {offer.attendees}'
     if room.alternative_type:
         fallback += '\n' + ('تنبيه: نوع القاعة بديل عن النوع المطلوب.' if language == 'ar' else 'Note: this is a different room type from your request.')
@@ -85,7 +86,7 @@ def select_room(session, room_id, language):
     message = f'أختار القاعة {room_id}' if language == 'ar' else f'Select room {room_id}'
     session.messages.append({'role': 'user', 'content': message})
     try:
-        session.options = bookings.find_rooms(session.draft)
+        session.options = bookings.find_rooms(session.draft, session.employee_id)
         if room_id not in {room.id for room in session.options}:
             return response(session, 'selection', text('selection', language), language, model=False)
         offer = bookings.make_offer(session, room_id)
@@ -104,9 +105,9 @@ def confirm_response(session, offer_id, language):
     try:
         result, repeated = bookings.confirm(session, offer_id)
         if language == 'ar':
-            message = ('هذا العرض محفوظ بالفعل؛ لم يُنشأ حجز مكرر.' if repeated else 'تم حفظ الحجز والتحقق منه في Firestore.')
+            message = ('حجزك محفوظ بالفعل، ما تحتاجين تأكدينه مرة ثانية. تلاقينه في تقويم حجوزاتي.' if repeated else 'تم حجز قاعتك وحفظ الحجز بنجاح! تلاقين تفاصيله في تقويم حجوزاتي.')
         else:
-            message = ('This offer is already persisted; no duplicate was created.' if repeated else 'Booking persisted and verified in Firestore.')
+            message = ('Your booking is already saved—no need to confirm again. You can find it in My calendar.' if repeated else 'Your room is booked and saved! You can find the details in My calendar.')
         message += f'\n{result.booking_id} · {result.room_id}'
         return response(session, 'already_confirmed' if repeated else 'confirmed', message, language,
                         model=False, booking=result)
@@ -172,7 +173,7 @@ def process(session, message, ui_language):
         return response(session, 'missing', text('missing', language) + '، '.join(names), language, message, missing)
     try:
         bookings.validate(session.draft)
-        session.options = bookings.find_rooms(session.draft)
+        session.options = bookings.find_rooms(session.draft, session.employee_id)
         selected = session.draft.get('selected_room')
         if selected and selected in [room.id for room in session.options]:
             # Material correction + confirmation never commits; it yields a fresh review.
@@ -182,7 +183,7 @@ def process(session, message, ui_language):
         if not session.options:
             fallback = ('لا توجد قاعة متاحة تناسب النوع أو البدائل والسعة في هذه الفترة. جرّبي موعدًا أو عدد حضور مختلفًا.' if language == 'ar' else 'No matching or alternative room fits the capacity and slot. Please try a different time or attendee count.')
             return response(session, 'unavailable', fallback, language, message)
-        fallback = ('هذه خيارات مستوفية للسعة والتوفر الآن. اختاري قاعة؛ البحث لا ينشئ حجزًا.' if language == 'ar' else 'These rooms currently fit the capacity and availability checks. Select one; searching does not create a booking.')
+        fallback = ('لقيت لك هذه القاعات المناسبة لعدد الحضور والمتاحة حسب الفحص الحالي. اختاري اللي تناسبك، وبعدها نراجع التفاصيل قبل التأكيد. القاعة ما تنحجز إلا بعد موافقتك.' if language == 'ar' else 'Here are the rooms that fit your group and are available in the current check. Pick the one you prefer, then we’ll review the details before you confirm. Nothing is booked until you confirm.')
         if selected:
             fallback = ('القاعة المطلوبة غير مناسبة أو غير متاحة للفترة. ' if language == 'ar' else 'The requested room is unsuitable or unavailable for the slot. ') + fallback
         if any(room.alternative_type for room in session.options):

@@ -18,7 +18,8 @@ HOSTED = os.getenv('RENDER') == 'true' or os.getenv('APP_ENV') == 'production'
 FRONTEND_ORIGIN = (os.getenv('FRONTEND_ORIGIN') or os.getenv('RENDER_EXTERNAL_URL') or 'http://127.0.0.1:5173').rstrip('/')
 DEMO_USERNAME = os.getenv('DEMO_USERNAME') or ''
 DEMO_PASSWORD = os.getenv('DEMO_PASSWORD') or ''
-if HOSTED and (not DEMO_USERNAME or len(DEMO_PASSWORD) < 16):
+REQUIRE_DEMO_AUTH = os.getenv('REQUIRE_DEMO_AUTH', 'false').lower() == 'true'
+if HOSTED and REQUIRE_DEMO_AUTH and (not DEMO_USERNAME or len(DEMO_PASSWORD) < 16):
     raise ValueError('Hosted demo requires DEMO_USERNAME and DEMO_PASSWORD (at least 16 characters).')
 if HOSTED and (MODEL_PROVIDER != 'groq' or not GROQ_API_KEY):
     raise ValueError('Hosted demo requires Groq provider and API key.')
