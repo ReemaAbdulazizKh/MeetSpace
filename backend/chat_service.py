@@ -34,6 +34,29 @@ def text(code, language):
     return MESSAGES[code][0 if language == 'ar' else 1]
 
 
+def missing_question(missing, language, message):
+    """Ask one coherent question, never repeat the whole booking form."""
+    ar = language == 'ar'
+    flexible = bool(re.search(r'ما\s*فيه?\s*وقت\s*معين|أي\s*وقت|اي\s*وقت|any\s*time|no\s*(?:specific|fixed)\s*time', message, re.I))
+    availability = flexible or bool(re.search(r'متوفر|متاح|available|availability', message, re.I))
+    prefix = (('التوفر يتغيّر حسب وقت الحجز، فما أقدر أعتبر القاعة متاحة لليوم كله. ' if ar else 'Availability depends on the booking time, rather than the whole day. ') if availability else '')
+    if 'room_type' in missing:
+        if flexible:
+            return ('تمام، وقتك مرن. نبدأ بنوع القاعة: اجتماعات أو تدريب؟ بعدها نحدد فترة مبدئية نفحص توفرها، بدل ما أفترض لك موعدًا.' if ar else 'Got it, your time is flexible. Let’s start with the room type: meeting or training? Then we can choose a time window to check, without assuming one for you.')
+        question = 'تبحثين عن قاعة اجتماعات أو تدريب؟' if ar else 'Are you looking for a meeting room or a training room?'
+    elif 'attendees' in missing:
+        question = 'كم عدد الحضور؟ عشان أبحث عن قاعة تسعكم.' if ar else 'How many people will attend? That helps me find a room that fits.'
+    elif 'date' in missing:
+        question = 'أي يوم يناسبك للحجز؟' if ar else 'Which date would you like?'
+    elif 'start_time' in missing and 'end_time' in missing:
+        question = ('إذا وقتك مرن، حددي فترة مبدئية تناسبك، مثل من 10 صباحًا إلى 12 ظهرًا، وأفحصها لك. ما بحثت عن توفر فعلي بعد.' if flexible else 'من أي ساعة إلى أي ساعة؟ اذكري صباحًا أو مساءً عشان يكون الموعد واضحًا.') if ar else ('If you’re flexible, pick an initial window, such as 10 AM to noon, and I can check it. I haven’t checked availability yet.' if flexible else 'What start and end times would you like? Please include AM or PM.')
+    elif 'start_time' in missing:
+        question = 'باقي وقت البداية؛ أي ساعة، صباحًا أو مساءً؟' if ar else 'What start time would you like, including AM or PM?'
+    else:
+        question = 'متى ينتهي الحجز، صباحًا أو مساءً؟' if ar else 'What end time would you like, including AM or PM?'
+    return prefix + question
+
+
 def explicit_assent(message):
     if any(character in message for character in ['?', '؟', '"', '“', '”', '«', '»']):
         return False
@@ -119,6 +142,12 @@ def confirm_response(session, offer_id, language):
 
 def process(session, message, ui_language):
     session.acknowledgment = None
+    greeting = re.sub(r'[^\w\s]', '', message.strip().lower())
+    if re.fullmatch(r'هاي|هلا|هلا والله|أهلًا|أهلا|اهلا|مرحبا|مرحبًا|السلام عليكم|hi|hello|hey', greeting):
+        language = 'en' if re.search('[a-z]', greeting) else 'ar'
+        session.messages.append({'role':'user','content':message})
+        reply = ('هلا فيك! أنا مساعد MeetSpace. أقدر أساعدك بحجز قاعة اجتماعات أو تدريب. وش تحتاجين اليوم؟' if language == 'ar' else 'Hi! I’m your MeetSpace assistant. I can help you book a meeting or training room. What do you need today?')
+        return response(session, 'greeting', reply, language, model=False)
     if re.search(r'\b(recurring|repeating|weekly|daily|every\s+(?:day|week|month))\b|متكرر|كل\s+(?:يوم|أسبوع|اسبوع|شهر)', message, re.I):
         if session.commit_unknown:
             return response(session, 'unknown', text('unknown', ui_language), ui_language, model=False)
@@ -169,8 +198,7 @@ def process(session, message, ui_language):
         return confirm_response(session, offer.offer_id, language)
     missing = [key for key in bookings.REQUIRED if session.draft.get(key) is None]
     if missing:
-        names = [LABELS[key][0 if language == 'ar' else 1] for key in missing]
-        return response(session, 'missing', text('missing', language) + '، '.join(names), language, message, missing)
+        return response(session, 'missing', missing_question(missing, language, message), language, message, missing)
     try:
         bookings.validate(session.draft)
         session.options = bookings.find_rooms(session.draft, session.employee_id)
