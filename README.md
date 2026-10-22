@@ -1,12 +1,17 @@
-# MeetSpace — Milestone 3
+# MeetSpace — AI-Powered Room Booking Assistant
 
-Local React/Vite + FastAPI booking assistant. Qwen2 7B interprets Arabic/English locally through Ollama; only Python validates availability and writes Firestore. No public deployment and no authentication. Role switching is for demonstration only.
+## 🌐 جرّبي التطبيق — Live Demo
+
+### [افتحي MeetSpace](https://meetspace-fucc.onrender.com/)
+
+**رابط التطبيق:** https://meetspace-fucc.onrender.com/
+
+React/Vite + FastAPI room-booking assistant using Qwen3.8 27B through Groq in the hosted configuration, with server-side validation and Firebase Firestore persistence. Local Ollama remains an optional provider. This is an educational demo with fictional data; role switching is not individual authentication.
 
 ## Project folders
 
 - backend/: runtime API, agent, booking rules and Firestore access.
 - backend/tests/: isolated automated tests.
-- backend/checks/: diagnostic tools; see [tool guide](backend/checks/README.md).
 - frontend/src/: React application; frontend/checks/: browser QA.
 - docs/: [document index](docs/README.md), approved references and reports.
 - docs/evidence/: original technical results, grouped by milestone.
