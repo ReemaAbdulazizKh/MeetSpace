@@ -6,6 +6,7 @@
 *firebase-adminsdk*.json
 presentation_source_pack/
 MeetSpace_Presentation_Source_Pack.zip
+/backend/checks/
 .secrets/
 .venv/
 __pycache__/
