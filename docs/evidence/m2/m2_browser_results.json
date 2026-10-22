@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "input": "I need a training room on 2026-12-24 from 14:00 to 15:00 for 20 people.",
+  "booking": {
+    "booking_id": "c6102c9f97be47378e7adb3e58df31c0",
+    "employee_id": "sara",
+    "room_id": "T04",
+    "start_at": "2026-12-24T11:00:00Z",
+    "end_at": "2026-12-24T12:00:00Z",
+    "status": "confirmed"
+  },
+  "session_id": "6487c0031e84415884184cbc56d356c8",
+  "checks": [
+    "real UI request/options/select/confirm",
+    "loading prevents repeat submit",
+    "theme/language preserve messages",
+    "employee conversation isolation",
+    "390/768/1440 widths",
+    "no page errors"
+  ]
+}

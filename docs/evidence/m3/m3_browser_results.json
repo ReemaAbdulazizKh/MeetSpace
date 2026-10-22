@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "timezone": "America/Los_Angeles",
+  "read_only": false,
+  "checks": [
+    "existing M2 employee records and isolation",
+    "Riyadh grouping/time despite Los Angeles browser timezone",
+    "admin across employees",
+    "10 actual rooms",
+    "theme/language retain selected details",
+    "responsive 390/768/1440",
+    "calendar clicks never create bookings",
+    "real browser maintenance enable and restore",
+    "dismissed confirmation sends no cancellation",
+    "accepted confirmation persists cancellation and updates calendar",
+    "previous-UTC-date booking displayed on correct Riyadh day",
+    "employee calendar responsive"
+  ],
+  "canceled_fixture": "f0220a64b01c4237b3b24ea59d60a4d2"
+}

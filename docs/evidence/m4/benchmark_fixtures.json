@@ -1,0 +1,15 @@
+{
+  "fixed_context_time": "2026-10-22T03:32:42+03:00",
+  "typical_date": "2027-01-30",
+  "messy_date": "2027-01-31",
+  "edge_booking_id": "2f9692be654b4aaa872eef497c8e72b3",
+  "edge_room_id": "T02",
+  "edge_date": "2026-11-26",
+  "initial_counts": {
+    "rooms": 10,
+    "employees": 3,
+    "bookings": 11,
+    "room_days": 10
+  },
+  "initial_state_hash": "d20dd1189f16a2bb742e07a6950b1a8ff91a70efdab175eff21a3029bb1d984e"
+}

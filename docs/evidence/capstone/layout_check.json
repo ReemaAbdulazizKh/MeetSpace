@@ -1,0 +1,2429 @@
+﻿{
+    "slides":  27,
+    "overflow":  [
+
+                 ],
+    "text":  [
+                 {
+                     "slide":  1,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  1,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  1,
+                     "font":  30,
+                     "characters":  9,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  1,
+                     "font":  19,
+                     "characters":  33,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  1,
+                     "font":  20,
+                     "characters":  25,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  1,
+                     "font":  19,
+                     "characters":  118,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  1,
+                     "font":  20,
+                     "characters":  27,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  1,
+                     "font":  19,
+                     "characters":  126,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  1,
+                     "font":  10,
+                     "characters":  74,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  2,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  2,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  2,
+                     "font":  30,
+                     "characters":  39,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  2,
+                     "font":  19,
+                     "characters":  122,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  2,
+                     "font":  20,
+                     "characters":  13,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  2,
+                     "font":  19,
+                     "characters":  152,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  2,
+                     "font":  20,
+                     "characters":  17,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  2,
+                     "font":  19,
+                     "characters":  136,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  2,
+                     "font":  20,
+                     "characters":  24,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  2,
+                     "font":  19,
+                     "characters":  154,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  2,
+                     "font":  10,
+                     "characters":  82,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  30,
+                     "characters":  17,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  19,
+                     "characters":  149,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  16,
+                     "characters":  6,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  18,
+                     "characters":  7,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  18,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  16,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  18,
+                     "characters":  45,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  18,
+                     "characters":  40,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  18,
+                     "characters":  40,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  16,
+                     "characters":  24,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  18,
+                     "characters":  16,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  18,
+                     "characters":  16,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  18,
+                     "characters":  16,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  17,
+                     "characters":  159,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  3,
+                     "font":  10,
+                     "characters":  74,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  4,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  4,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  4,
+                     "font":  30,
+                     "characters":  39,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  4,
+                     "font":  19,
+                     "characters":  128,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  4,
+                     "font":  20,
+                     "characters":  23,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  4,
+                     "font":  19,
+                     "characters":  135,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  4,
+                     "font":  20,
+                     "characters":  29,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  4,
+                     "font":  19,
+                     "characters":  143,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  4,
+                     "font":  20,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  4,
+                     "font":  19,
+                     "characters":  166,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  4,
+                     "font":  10,
+                     "characters":  54,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  30,
+                     "characters":  26,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  85,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  16,
+                     "characters":  6,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  22,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  23,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  21,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  25,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  16,
+                     "characters":  19,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  26,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  18,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  26,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  26,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  16,
+                     "characters":  15,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  35,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  40,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  29,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  19,
+                     "characters":  38,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  5,
+                     "font":  10,
+                     "characters":  88,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  30,
+                     "characters":  26,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  19,
+                     "characters":  88,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  16,
+                     "characters":  7,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  18,
+                     "characters":  24,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  18,
+                     "characters":  19,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  18,
+                     "characters":  19,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  18,
+                     "characters":  23,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  16,
+                     "characters":  10,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  18,
+                     "characters":  25,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  18,
+                     "characters":  31,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  18,
+                     "characters":  27,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  18,
+                     "characters":  28,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  16,
+                     "characters":  20,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  16.5,
+                     "characters":  40,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  18,
+                     "characters":  35,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  18,
+                     "characters":  32,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  18,
+                     "characters":  40,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  17,
+                     "characters":  197,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  6,
+                     "font":  10,
+                     "characters":  59,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  30,
+                     "characters":  29,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  19,
+                     "characters":  93,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  16,
+                     "characters":  6,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  18,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  18,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  18,
+                     "characters":  7,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  18,
+                     "characters":  15,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  16,
+                     "characters":  26,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  18,
+                     "characters":  62,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  16.5,
+                     "characters":  75,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  16,
+                     "characters":  69,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  16,
+                     "characters":  72,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  17,
+                     "characters":  190,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  7,
+                     "font":  10,
+                     "characters":  58,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  8,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  8,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  8,
+                     "font":  30,
+                     "characters":  31,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  8,
+                     "font":  19,
+                     "characters":  94,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  8,
+                     "font":  20,
+                     "characters":  10,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  8,
+                     "font":  19,
+                     "characters":  122,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  8,
+                     "font":  20,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  8,
+                     "font":  19,
+                     "characters":  164,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  8,
+                     "font":  20,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  8,
+                     "font":  19,
+                     "characters":  142,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  8,
+                     "font":  10,
+                     "characters":  80,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  9,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  9,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  9,
+                     "font":  30,
+                     "characters":  22,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  9,
+                     "font":  19,
+                     "characters":  111,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  9,
+                     "font":  20,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  9,
+                     "font":  19,
+                     "characters":  132,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  9,
+                     "font":  20,
+                     "characters":  13,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  9,
+                     "font":  19,
+                     "characters":  133,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  9,
+                     "font":  20,
+                     "characters":  22,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  9,
+                     "font":  19,
+                     "characters":  160,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  9,
+                     "font":  10,
+                     "characters":  66,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  10,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  10,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  10,
+                     "font":  30,
+                     "characters":  34,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  10,
+                     "font":  19,
+                     "characters":  136,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  10,
+                     "font":  14,
+                     "characters":  45,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  10,
+                     "font":  14,
+                     "characters":  46,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  10,
+                     "font":  10,
+                     "characters":  55,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  11,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  11,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  11,
+                     "font":  30,
+                     "characters":  27,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  11,
+                     "font":  19,
+                     "characters":  115,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  11,
+                     "font":  14,
+                     "characters":  24,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  11,
+                     "font":  14,
+                     "characters":  36,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  11,
+                     "font":  10,
+                     "characters":  54,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  12,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  12,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  12,
+                     "font":  30,
+                     "characters":  36,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  12,
+                     "font":  19,
+                     "characters":  106,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  12,
+                     "font":  20,
+                     "characters":  15,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  12,
+                     "font":  19,
+                     "characters":  141,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  12,
+                     "font":  20,
+                     "characters":  17,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  12,
+                     "font":  19,
+                     "characters":  147,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  12,
+                     "font":  20,
+                     "characters":  27,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  12,
+                     "font":  19,
+                     "characters":  188,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  12,
+                     "font":  10,
+                     "characters":  66,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  30,
+                     "characters":  29,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  19,
+                     "characters":  123,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  16,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  19,
+                     "characters":  26,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  19,
+                     "characters":  15,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  19,
+                     "characters":  11,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  19,
+                     "characters":  21,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  16,
+                     "characters":  24,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  19,
+                     "characters":  104,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  18,
+                     "characters":  119,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  18,
+                     "characters":  131,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  19,
+                     "characters":  110,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  13,
+                     "font":  10,
+                     "characters":  75,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  30,
+                     "characters":  40,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  19,
+                     "characters":  118,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  16,
+                     "characters":  15,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  18,
+                     "characters":  38,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  18,
+                     "characters":  44,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  18,
+                     "characters":  34,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  16,
+                     "characters":  16,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  18,
+                     "characters":  39,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  18,
+                     "characters":  49,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  18,
+                     "characters":  56,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  16,
+                     "characters":  23,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  18,
+                     "characters":  62,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  14.5,
+                     "characters":  90,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  15,
+                     "characters":  89,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  17,
+                     "characters":  137,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  14,
+                     "font":  10,
+                     "characters":  88,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  30,
+                     "characters":  33,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  19,
+                     "characters":  84,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  16,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  19,
+                     "characters":  15,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  19,
+                     "characters":  20,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  19,
+                     "characters":  18,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  16,
+                     "characters":  27,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  19,
+                     "characters":  71,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  19,
+                     "characters":  91,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  19,
+                     "characters":  93,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  16,
+                     "characters":  23,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  19,
+                     "characters":  76,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  19,
+                     "characters":  78,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  19,
+                     "characters":  69,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  15,
+                     "font":  10,
+                     "characters":  77,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  30,
+                     "characters":  31,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  19,
+                     "characters":  79,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  16,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  18,
+                     "characters":  13,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  18,
+                     "characters":  10,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  18,
+                     "characters":  14,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  16,
+                     "characters":  13,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  18,
+                     "characters":  62,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  18,
+                     "characters":  67,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  18,
+                     "characters":  44,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  16,
+                     "characters":  14,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  18,
+                     "characters":  48,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  18,
+                     "characters":  50,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  18,
+                     "characters":  82,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  17,
+                     "characters":  158,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  16,
+                     "font":  10,
+                     "characters":  48,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  30,
+                     "characters":  36,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  19,
+                     "characters":  95,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  16,
+                     "characters":  7,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  19,
+                     "characters":  9,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  19,
+                     "characters":  18,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  19,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  16,
+                     "characters":  18,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  19,
+                     "characters":  60,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  17,
+                     "characters":  116,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  19,
+                     "characters":  69,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  16,
+                     "characters":  23,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  19,
+                     "characters":  28,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  19,
+                     "characters":  46,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  19,
+                     "characters":  76,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  17,
+                     "font":  10,
+                     "characters":  83,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  30,
+                     "characters":  42,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  19,
+                     "characters":  95,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  16,
+                     "characters":  6,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  7,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  16,
+                     "characters":  10,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  16,
+                     "characters":  9,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  16,
+                     "characters":  17,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  15,
+                     "characters":  216,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  15.5,
+                     "characters":  200,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  18,
+                     "font":  10,
+                     "characters":  75,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  30,
+                     "characters":  26,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  19,
+                     "characters":  124,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  16,
+                     "characters":  6,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  7,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  7,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  16,
+                     "characters":  14,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  16,
+                     "characters":  9,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  16,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  13,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  13,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  13,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  18,
+                     "characters":  13,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  13,
+                     "characters":  38,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  14,
+                     "characters":  7,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  13,
+                     "characters":  3,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  13,
+                     "characters":  2,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  14,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  13,
+                     "characters":  3,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  13,
+                     "characters":  2,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  14,
+                     "characters":  4,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  13,
+                     "characters":  3,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  13,
+                     "characters":  3,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  12,
+                     "characters":  37,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  19,
+                     "characters":  36,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  19,
+                     "font":  10,
+                     "characters":  69,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  20,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  20,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  20,
+                     "font":  30,
+                     "characters":  29,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  20,
+                     "font":  19,
+                     "characters":  112,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  20,
+                     "font":  20,
+                     "characters":  16,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  20,
+                     "font":  19,
+                     "characters":  148,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  20,
+                     "font":  20,
+                     "characters":  11,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  20,
+                     "font":  19,
+                     "characters":  180,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  20,
+                     "font":  20,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  20,
+                     "font":  19,
+                     "characters":  188,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  20,
+                     "font":  10,
+                     "characters":  61,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  30,
+                     "characters":  25,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  19,
+                     "characters":  72,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  16,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  18,
+                     "characters":  25,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  18,
+                     "characters":  27,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  18,
+                     "characters":  32,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  18,
+                     "characters":  22,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  16,
+                     "characters":  27,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  16,
+                     "characters":  72,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  15,
+                     "characters":  70,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  14,
+                     "characters":  93,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  14,
+                     "characters":  114,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  17,
+                     "characters":  224,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  21,
+                     "font":  10,
+                     "characters":  46,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  30,
+                     "characters":  38,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  19,
+                     "characters":  90,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  16,
+                     "characters":  7,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  19,
+                     "characters":  11,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  19,
+                     "characters":  13,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  19,
+                     "characters":  11,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  16,
+                     "characters":  23,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  19,
+                     "characters":  96,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  19,
+                     "characters":  94,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  19,
+                     "characters":  101,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  16,
+                     "characters":  14,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  19,
+                     "characters":  76,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  19,
+                     "characters":  59,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  19,
+                     "characters":  87,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  22,
+                     "font":  10,
+                     "characters":  57,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  23,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  23,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  23,
+                     "font":  30,
+                     "characters":  21,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  23,
+                     "font":  19,
+                     "characters":  125,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  23,
+                     "font":  20,
+                     "characters":  21,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  23,
+                     "font":  19,
+                     "characters":  160,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  23,
+                     "font":  20,
+                     "characters":  25,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  23,
+                     "font":  19,
+                     "characters":  167,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  23,
+                     "font":  20,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  23,
+                     "font":  19,
+                     "characters":  180,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  23,
+                     "font":  10,
+                     "characters":  96,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  24,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  24,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  24,
+                     "font":  30,
+                     "characters":  34,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  24,
+                     "font":  19,
+                     "characters":  92,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  24,
+                     "font":  20,
+                     "characters":  20,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  24,
+                     "font":  17,
+                     "characters":  223,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  24,
+                     "font":  20,
+                     "characters":  20,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  24,
+                     "font":  19,
+                     "characters":  178,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  24,
+                     "font":  20,
+                     "characters":  27,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  24,
+                     "font":  19,
+                     "characters":  176,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  24,
+                     "font":  10,
+                     "characters":  91,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  30,
+                     "characters":  40,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  157,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  16,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  21,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  18,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  13,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  31,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  12,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  32,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  19,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  35,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  16,
+                     "characters":  14,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  11,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  1,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  3,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  7,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  2,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  19,
+                     "characters":  5,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  25,
+                     "font":  10,
+                     "characters":  77,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  26,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  26,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  26,
+                     "font":  30,
+                     "characters":  23,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  26,
+                     "font":  19,
+                     "characters":  112,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  26,
+                     "font":  20,
+                     "characters":  13,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  26,
+                     "font":  19,
+                     "characters":  234,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  26,
+                     "font":  20,
+                     "characters":  23,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  26,
+                     "font":  19,
+                     "characters":  281,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  26,
+                     "font":  9,
+                     "characters":  215,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  27,
+                     "font":  10,
+                     "characters":  26,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  27,
+                     "font":  10,
+                     "characters":  7,
+                     "type":  "reference"
+                 },
+                 {
+                     "slide":  27,
+                     "font":  30,
+                     "characters":  38,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  27,
+                     "font":  19,
+                     "characters":  105,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  27,
+                     "font":  14,
+                     "characters":  43,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  27,
+                     "font":  14,
+                     "characters":  51,
+                     "type":  "content"
+                 },
+                 {
+                     "slide":  27,
+                     "font":  10,
+                     "characters":  87,
+                     "type":  "reference"
+                 }
+             ],
+    "generated_at":  "2026-10-22T06:46:58.2252428+03:00",
+    "pptx":  "C:\\Users\\reema\\OneDrive\\سطح المكتب\\MeetSpace\\MeetSpace_Final_Presentation.pptx",
+    "pdf":  "C:\\Users\\reema\\OneDrive\\سطح المكتب\\MeetSpace\\MeetSpace_Final_Presentation.pdf"
+}

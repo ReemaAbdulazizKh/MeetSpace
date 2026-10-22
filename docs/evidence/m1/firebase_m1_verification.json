@@ -1,0 +1,15 @@
+{
+  "connection": "ok",
+  "first_seed_created": 13,
+  "second_seed_created": 0,
+  "collection_counts": {
+    "rooms": 10,
+    "employees": 3,
+    "bookings": 0,
+    "room_days": 0
+  },
+  "existing_records_preserved": true,
+  "bookings_and_room_days_unchanged": true,
+  "required_room_ids_present": 10,
+  "required_employee_ids_present": 3
+}

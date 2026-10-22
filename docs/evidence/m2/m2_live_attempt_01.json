@@ -1,0 +1,54 @@
+{
+  "started_riyadh": "2026-10-22T02:28:38.610425+03:00",
+  "tests": [
+    {
+      "name": "health",
+      "status": "ok",
+      "backend": "ok",
+      "ollama": {
+        "status": "ok",
+        "message": "Ollama reachable; configured model installed.",
+        "model": "qwen2:7b"
+      },
+      "firestore": {
+        "status": "ok",
+        "message": "Firestore server read succeeded.",
+        "model": null
+      }
+    },
+    {
+      "name": "chat",
+      "input": "I need a training room on 2026-11-26 from 10:00 to 12:00 for 15 people.",
+      "employee": "sara",
+      "elapsed_seconds": 63.83,
+      "result": {
+        "session_id": "9d05f0aa4dbf48a496df7ba93a943b73",
+        "reply": "I only need these details: end time with AM/PM",
+        "status": "missing",
+        "draft": {
+          "room_type": "training",
+          "date": "2026-11-26",
+          "start_time": "10:00",
+          "attendees": 15
+        },
+        "missing": [
+          "end_time"
+        ],
+        "options": [],
+        "pending_offer": null,
+        "booking": null,
+        "response_source": "server"
+      }
+    }
+  ],
+  "test_bookings": [],
+  "status": "failed",
+  "test_dates": [
+    "2026-11-26",
+    "2026-11-27",
+    "2026-11-28",
+    "2026-11-29"
+  ],
+  "failure_type": "AssertionError",
+  "failure": "{'session_id': '9d05f0aa4dbf48a496df7ba93a943b73', 'reply': 'I only need these details: end time with AM/PM', 'status': 'missing', 'draft': {'room_type': 'training', 'date': '2026-11-26', 'start_time': '10:00', 'attendees': 15}, 'missing': ['end_time'], 'options': [], 'pending_offer': None, 'booking': None, 'response_source': 'server'}"
+}

@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "health_after_backend_restart": {
+    "status": "ok",
+    "backend": "ok",
+    "ollama": {
+      "status": "ok",
+      "message": "Ollama reachable; configured model installed.",
+      "model": "qwen2:7b"
+    },
+    "firestore": {
+      "status": "ok",
+      "message": "Firestore server read succeeded.",
+      "model": null
+    }
+  },
+  "persisted_booking_ids_and_statuses_match_audit": true,
+  "collection_counts": {
+    "rooms": 10,
+    "employees": 3,
+    "bookings": 17,
+    "room_days": 15
+  },
+  "booking_status_counts": {
+    "confirmed": 13,
+    "canceled": 4
+  },
+  "credentials_and_env_ignored_untracked": true,
+  "manual_measurement_result_cells_all_blank": true,
+  "baseline_preserved_and_production_prompt_matches_C": true,
+  "firestore_project": "smart-room-booking-agent"
+}

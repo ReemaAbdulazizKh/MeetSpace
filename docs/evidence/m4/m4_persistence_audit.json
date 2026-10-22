@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "audited_riyadh": "2026-10-22T03:51:19.259373+03:00",
+  "preexisting_records_all_unchanged": true,
+  "preexisting_bookings_preserved": 11,
+  "all_intervals_match_booking_status": true,
+  "no_confirmed_overlaps": true,
+  "tested_room_original_status_restored": true,
+  "collection_counts": {
+    "rooms": 10,
+    "employees": 3,
+    "bookings": 17,
+    "room_days": 15
+  },
+  "booking_status_counts": {
+    "confirmed": 13,
+    "canceled": 4
+  },
+  "new_disclosed_test_bookings": [
+    {
+      "label": "Typical — English natural confirmation",
+      "booking_id": "5f53b72435f24ec289a7a1a021b07c32",
+      "employee_id": "sara",
+      "room_id": "T02",
+      "start_at": "2026-12-08 07:00:00+00:00",
+      "end_at": "2026-12-08 09:00:00+00:00",
+      "status": "confirmed"
+    },
+    {
+      "label": "Messy — Arabic follow-up and natural confirmation",
+      "booking_id": "4bf774563b814f099e24ba21536e3d1f",
+      "employee_id": "noura",
+      "room_id": "T02",
+      "start_at": "2026-12-09 07:00:00+00:00",
+      "end_at": "2026-12-09 09:00:00+00:00",
+      "status": "confirmed"
+    },
+    {
+      "label": "Concurrency — one winning transaction",
+      "booking_id": "ced618dea87442bab525dc0c897c8041",
+      "employee_id": "sara",
+      "room_id": "T02",
+      "start_at": "2026-12-11 07:00:00+00:00",
+      "end_at": "2026-12-11 08:00:00+00:00",
+      "status": "confirmed"
+    },
+    {
+      "label": "M3 API cancellation fixture",
+      "booking_id": "3b49223395184ddeb58f8254bdd0c9fa",
+      "employee_id": "fahad",
+      "room_id": "M01",
+      "start_at": "2027-01-10 21:30:00+00:00",
+      "end_at": "2027-01-10 22:30:00+00:00",
+      "status": "canceled"
+    },
+    {
+      "label": "M3 adjacent interval preservation fixture",
+      "booking_id": "a8bad8fd84544449960f2414a18a7145",
+      "employee_id": "noura",
+      "room_id": "M01",
+      "start_at": "2027-01-10 22:30:00+00:00",
+      "end_at": "2027-01-10 23:30:00+00:00",
+      "status": "confirmed"
+    },
+    {
+      "label": "M3 browser cancellation fixture — not an M2 record",
+      "booking_id": "707cdeed308145e8bf0b87d153c4f68a",
+      "employee_id": "sara",
+      "room_id": "M02",
+      "start_at": "2027-01-11 11:00:00+00:00",
+      "end_at": "2027-01-11 12:00:00+00:00",
+      "status": "canceled"
+    }
+  ]
+}

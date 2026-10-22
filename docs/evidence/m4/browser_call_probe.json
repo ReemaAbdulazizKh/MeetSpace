@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "elapsed_seconds": 12.5638017,
+  "post_requests": 1,
+  "requests": [
+    {
+      "url": "http://127.0.0.1:5173/api/chat",
+      "method": "POST"
+    }
+  ],
+  "result_status": "options",
+  "booking_created": false,
+  "scope": "Actual browser sends one provisional search only; no selection or confirmation"
+}

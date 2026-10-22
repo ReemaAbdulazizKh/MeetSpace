@@ -1,0 +1,624 @@
+{
+  "started_riyadh": "2026-10-22T03:45:30.381464+03:00",
+  "tests": [
+    {
+      "name": "health",
+      "status": "ok",
+      "backend": "ok",
+      "ollama": {
+        "status": "ok",
+        "message": "Ollama reachable; configured model installed.",
+        "model": "qwen2:7b"
+      },
+      "firestore": {
+        "status": "ok",
+        "message": "Firestore server read succeeded.",
+        "model": null
+      }
+    },
+    {
+      "name": "chat",
+      "input": "I need a training room on 2026-12-08 from 10:00 to 12:00 for 15 people.",
+      "employee": "sara",
+      "elapsed_seconds": 20.83,
+      "result": {
+        "session_id": "781043d9246c4e4a868f0d1481e9e024",
+        "reply": "These rooms currently fit the capacity and availability checks. Select one; searching does not create a booking.",
+        "status": "options",
+        "draft": {
+          "room_type": "training",
+          "date": "2026-12-08",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "attendees": 15
+        },
+        "missing": [],
+        "options": [
+          {
+            "id": "T02",
+            "name": {
+              "ar": "قاعة التدريب 02",
+              "en": "Training Room 02"
+            },
+            "type": "training",
+            "capacity": 15,
+            "alternative_type": false
+          },
+          {
+            "id": "T03",
+            "name": {
+              "ar": "قاعة التدريب 03",
+              "en": "Training Room 03"
+            },
+            "type": "training",
+            "capacity": 15,
+            "alternative_type": false
+          },
+          {
+            "id": "T04",
+            "name": {
+              "ar": "قاعة التدريب 04",
+              "en": "Training Room 04"
+            },
+            "type": "training",
+            "capacity": 20,
+            "alternative_type": false
+          },
+          {
+            "id": "T05",
+            "name": {
+              "ar": "قاعة التدريب 05",
+              "en": "Training Room 05"
+            },
+            "type": "training",
+            "capacity": 30,
+            "alternative_type": false
+          }
+        ],
+        "pending_offer": null,
+        "booking": null,
+        "response_source": "server"
+      }
+    },
+    {
+      "name": "chat",
+      "input": "Select room T02",
+      "employee": "sara",
+      "elapsed_seconds": 33.47,
+      "result": {
+        "session_id": "781043d9246c4e4a868f0d1481e9e024",
+        "reply": "Review this offer, then explicitly confirm.\nTraining Room 02 · 2026-12-08 · 10:00–12:00 · 15",
+        "status": "offer",
+        "draft": {
+          "room_type": "training",
+          "date": "2026-12-08",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "attendees": 15,
+          "selected_room": "T02"
+        },
+        "missing": [],
+        "options": [
+          {
+            "id": "T02",
+            "name": {
+              "ar": "قاعة التدريب 02",
+              "en": "Training Room 02"
+            },
+            "type": "training",
+            "capacity": 15,
+            "alternative_type": false
+          },
+          {
+            "id": "T03",
+            "name": {
+              "ar": "قاعة التدريب 03",
+              "en": "Training Room 03"
+            },
+            "type": "training",
+            "capacity": 15,
+            "alternative_type": false
+          },
+          {
+            "id": "T04",
+            "name": {
+              "ar": "قاعة التدريب 04",
+              "en": "Training Room 04"
+            },
+            "type": "training",
+            "capacity": 20,
+            "alternative_type": false
+          },
+          {
+            "id": "T05",
+            "name": {
+              "ar": "قاعة التدريب 05",
+              "en": "Training Room 05"
+            },
+            "type": "training",
+            "capacity": 30,
+            "alternative_type": false
+          }
+        ],
+        "pending_offer": {
+          "offer_id": "5f53b72435f24ec289a7a1a021b07c32",
+          "room": {
+            "id": "T02",
+            "name": {
+              "ar": "قاعة التدريب 02",
+              "en": "Training Room 02"
+            },
+            "type": "training",
+            "capacity": 15,
+            "alternative_type": false
+          },
+          "date": "2026-12-08",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "attendees": 15,
+          "requested_type": "training"
+        },
+        "booking": null,
+        "response_source": "server"
+      }
+    },
+    {
+      "name": "chat",
+      "input": "Yes, book it",
+      "employee": "sara",
+      "elapsed_seconds": 30.52,
+      "result": {
+        "session_id": "781043d9246c4e4a868f0d1481e9e024",
+        "reply": "Booking persisted and verified in Firestore.\n5f53b72435f24ec289a7a1a021b07c32 · T02",
+        "status": "confirmed",
+        "draft": {
+          "room_type": "training",
+          "date": "2026-12-08",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "attendees": 15,
+          "selected_room": "T02"
+        },
+        "missing": [],
+        "options": [],
+        "pending_offer": null,
+        "booking": {
+          "booking_id": "5f53b72435f24ec289a7a1a021b07c32",
+          "employee_id": "sara",
+          "room_id": "T02",
+          "start_at": "2026-12-08T07:00:00Z",
+          "end_at": "2026-12-08T09:00:00Z",
+          "status": "confirmed"
+        },
+        "response_source": "server"
+      }
+    },
+    {
+      "name": "duplicate_confirmation",
+      "passed": true,
+      "booking_id": "5f53b72435f24ec289a7a1a021b07c32"
+    },
+    {
+      "name": "stale_offer_transaction_conflict",
+      "passed": true
+    },
+    {
+      "name": "chat",
+      "input": "أحتاج قاعة تدريب يوم 2026-12-09 الساعة 10 صباحًا",
+      "employee": "noura",
+      "elapsed_seconds": 10.02,
+      "result": {
+        "session_id": "0c2e11a9c4954179964d36d513fe93b7",
+        "reply": "أحتاج هذه التفاصيل فقط: وقت النهاية مع صباحًا/مساءً، عدد الحضور",
+        "status": "missing",
+        "draft": {
+          "room_type": "training",
+          "date": "2026-12-09",
+          "start_time": "10:00"
+        },
+        "missing": [
+          "end_time",
+          "attendees"
+        ],
+        "options": [],
+        "pending_offer": null,
+        "booking": null,
+        "response_source": "server"
+      }
+    },
+    {
+      "name": "chat",
+      "input": "عدد الحضور 15 شخصًا والنهاية الساعة 12 ظهرًا",
+      "employee": "noura",
+      "elapsed_seconds": 19.28,
+      "result": {
+        "session_id": "0c2e11a9c4954179964d36d513fe93b7",
+        "reply": "هذا خيارات مستوفية للسعة والتوفر الآن. يرجى اختيار القاعة.\nهذه خيارات مستوفية للسعة والتوفر الآن. اختاري قاعة؛ البحث لا ينشئ حجزًا.",
+        "status": "options",
+        "draft": {
+          "room_type": "training",
+          "date": "2026-12-09",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "attendees": 15
+        },
+        "missing": [],
+        "options": [
+          {
+            "id": "T02",
+            "name": {
+              "ar": "قاعة التدريب 02",
+              "en": "Training Room 02"
+            },
+            "type": "training",
+            "capacity": 15,
+            "alternative_type": false
+          },
+          {
+            "id": "T03",
+            "name": {
+              "ar": "قاعة التدريب 03",
+              "en": "Training Room 03"
+            },
+            "type": "training",
+            "capacity": 15,
+            "alternative_type": false
+          },
+          {
+            "id": "T04",
+            "name": {
+              "ar": "قاعة التدريب 04",
+              "en": "Training Room 04"
+            },
+            "type": "training",
+            "capacity": 20,
+            "alternative_type": false
+          },
+          {
+            "id": "T05",
+            "name": {
+              "ar": "قاعة التدريب 05",
+              "en": "Training Room 05"
+            },
+            "type": "training",
+            "capacity": 30,
+            "alternative_type": false
+          }
+        ],
+        "pending_offer": null,
+        "booking": null,
+        "response_source": "ollama"
+      }
+    },
+    {
+      "name": "chat",
+      "input": "أختار القاعة T02",
+      "employee": "noura",
+      "elapsed_seconds": 33.75,
+      "result": {
+        "session_id": "0c2e11a9c4954179964d36d513fe93b7",
+        "reply": "راجعي العرض ثم أكدي صراحةً.\nقاعة التدريب 02 · 2026-12-09 · 10:00–12:00 · 15",
+        "status": "offer",
+        "draft": {
+          "room_type": "training",
+          "date": "2026-12-09",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "attendees": 15,
+          "selected_room": "T02"
+        },
+        "missing": [],
+        "options": [
+          {
+            "id": "T02",
+            "name": {
+              "ar": "قاعة التدريب 02",
+              "en": "Training Room 02"
+            },
+            "type": "training",
+            "capacity": 15,
+            "alternative_type": false
+          },
+          {
+            "id": "T03",
+            "name": {
+              "ar": "قاعة التدريب 03",
+              "en": "Training Room 03"
+            },
+            "type": "training",
+            "capacity": 15,
+            "alternative_type": false
+          },
+          {
+            "id": "T04",
+            "name": {
+              "ar": "قاعة التدريب 04",
+              "en": "Training Room 04"
+            },
+            "type": "training",
+            "capacity": 20,
+            "alternative_type": false
+          },
+          {
+            "id": "T05",
+            "name": {
+              "ar": "قاعة التدريب 05",
+              "en": "Training Room 05"
+            },
+            "type": "training",
+            "capacity": 30,
+            "alternative_type": false
+          }
+        ],
+        "pending_offer": {
+          "offer_id": "4bf774563b814f099e24ba21536e3d1f",
+          "room": {
+            "id": "T02",
+            "name": {
+              "ar": "قاعة التدريب 02",
+              "en": "Training Room 02"
+            },
+            "type": "training",
+            "capacity": 15,
+            "alternative_type": false
+          },
+          "date": "2026-12-09",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "attendees": 15,
+          "requested_type": "training"
+        },
+        "booking": null,
+        "response_source": "server"
+      }
+    },
+    {
+      "name": "chat",
+      "input": "أؤكد الحجز",
+      "employee": "noura",
+      "elapsed_seconds": 30.33,
+      "result": {
+        "session_id": "0c2e11a9c4954179964d36d513fe93b7",
+        "reply": "تم حفظ الحجز والتحقق منه في Firestore.\n4bf774563b814f099e24ba21536e3d1f · T02",
+        "status": "confirmed",
+        "draft": {
+          "room_type": "training",
+          "date": "2026-12-09",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "attendees": 15,
+          "selected_room": "T02"
+        },
+        "missing": [],
+        "options": [],
+        "pending_offer": null,
+        "booking": {
+          "booking_id": "4bf774563b814f099e24ba21536e3d1f",
+          "employee_id": "noura",
+          "room_id": "T02",
+          "start_at": "2026-12-09T07:00:00Z",
+          "end_at": "2026-12-09T09:00:00Z",
+          "status": "confirmed"
+        },
+        "response_source": "server"
+      }
+    },
+    {
+      "name": "chat",
+      "input": "I need training room T02 on 2026-12-08 from 10:00 to 12:00 for 15 people.",
+      "employee": "fahad",
+      "elapsed_seconds": 20.66,
+      "result": {
+        "session_id": "44ed187656bd4c96816e597ddc6cff34",
+        "reply": "The requested room is unsuitable or unavailable for the slot. These rooms currently fit the capacity and availability checks. Select one; searching does not create a booking.",
+        "status": "options",
+        "draft": {
+          "room_type": "training",
+          "date": "2026-12-08",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "attendees": 15,
+          "selected_room": "T02"
+        },
+        "missing": [],
+        "options": [
+          {
+            "id": "T03",
+            "name": {
+              "ar": "قاعة التدريب 03",
+              "en": "Training Room 03"
+            },
+            "type": "training",
+            "capacity": 15,
+            "alternative_type": false
+          },
+          {
+            "id": "T04",
+            "name": {
+              "ar": "قاعة التدريب 04",
+              "en": "Training Room 04"
+            },
+            "type": "training",
+            "capacity": 20,
+            "alternative_type": false
+          },
+          {
+            "id": "T05",
+            "name": {
+              "ar": "قاعة التدريب 05",
+              "en": "Training Room 05"
+            },
+            "type": "training",
+            "capacity": 30,
+            "alternative_type": false
+          }
+        ],
+        "pending_offer": null,
+        "booking": null,
+        "response_source": "server"
+      }
+    },
+    {
+      "name": "edge_conflict_alternatives",
+      "passed": true,
+      "blocked_room": "T02",
+      "alternative_ids": [
+        "T03",
+        "T04",
+        "T05"
+      ]
+    },
+    {
+      "name": "chat",
+      "input": "I confirm the booking",
+      "employee": "fahad",
+      "elapsed_seconds": 8.0,
+      "result": {
+        "session_id": "8fc52f1ae18641efb82899be8ffff0f4",
+        "reply": "There is no valid pending offer. Select a displayed room first.",
+        "status": "no_offer",
+        "draft": {},
+        "missing": [],
+        "options": [],
+        "pending_offer": null,
+        "booking": null,
+        "response_source": "server"
+      }
+    },
+    {
+      "name": "chat",
+      "input": "I need a training room on 2000-01-01 from 10:00 to 12:00 for 15 people.",
+      "employee": "fahad",
+      "elapsed_seconds": 14.81,
+      "result": {
+        "session_id": "287b438674f8479eaa5517d95f3a027d",
+        "reply": "The start time must be strictly in the future when booking is committed.",
+        "status": "past",
+        "draft": {
+          "room_type": "training",
+          "date": "2000-01-01",
+          "start_time": "10:00",
+          "end_time": "12:00",
+          "attendees": 15
+        },
+        "missing": [],
+        "options": [],
+        "pending_offer": null,
+        "booking": null,
+        "response_source": "server"
+      }
+    },
+    {
+      "name": "chat",
+      "input": "I need a training room on 2026-12-10 from 14:00 to 13:00 for 15 people.",
+      "employee": "fahad",
+      "elapsed_seconds": 16.86,
+      "result": {
+        "session_id": "342b1376b3134d8eaa1f0daec124fa95",
+        "reply": "End time must be later than start time on the same day. Please correct the time.",
+        "status": "end_time",
+        "draft": {
+          "room_type": "training",
+          "date": "2026-12-10",
+          "start_time": "14:00",
+          "end_time": "13:00",
+          "attendees": 15
+        },
+        "missing": [],
+        "options": [],
+        "pending_offer": null,
+        "booking": null,
+        "response_source": "server"
+      }
+    },
+    {
+      "name": "chat",
+      "input": "I need a training room on 2026-12-10 from 23:00 until 01:00 the next day for 15 people.",
+      "employee": "fahad",
+      "elapsed_seconds": 15.14,
+      "result": {
+        "session_id": "3c729ba6b1c1459cae92daf1779352e9",
+        "reply": "The requested end time cannot be before the start time on the same day. Please adjust the time.\nEnd time must be later than start time on the same day. Please correct the time.",
+        "status": "end_time",
+        "draft": {
+          "room_type": "training",
+          "date": "2026-12-10",
+          "start_time": "23:00",
+          "end_time": "01:00",
+          "attendees": 15
+        },
+        "missing": [],
+        "options": [],
+        "pending_offer": null,
+        "booking": null,
+        "response_source": "ollama"
+      }
+    },
+    {
+      "name": "concurrent_same_slot",
+      "passed": true,
+      "results": [
+        {
+          "status": "confirmed",
+          "booking": {
+            "booking_id": "ced618dea87442bab525dc0c897c8041",
+            "employee_id": "sara",
+            "room_id": "T02",
+            "start_at": "2026-12-11T07:00:00Z",
+            "end_at": "2026-12-11T08:00:00Z",
+            "status": "confirmed"
+          }
+        },
+        {
+          "status": "conflict"
+        }
+      ]
+    }
+  ],
+  "test_bookings": [
+    {
+      "label": "Typical — English natural confirmation",
+      "booking_id": "5f53b72435f24ec289a7a1a021b07c32",
+      "employee_id": "sara",
+      "room_id": "T02",
+      "start_at": "2026-12-08T07:00:00Z",
+      "end_at": "2026-12-08T09:00:00Z",
+      "status": "confirmed",
+      "room_day": "T02_20261208"
+    },
+    {
+      "label": "Messy — Arabic follow-up and natural confirmation",
+      "booking_id": "4bf774563b814f099e24ba21536e3d1f",
+      "employee_id": "noura",
+      "room_id": "T02",
+      "start_at": "2026-12-09T07:00:00Z",
+      "end_at": "2026-12-09T09:00:00Z",
+      "status": "confirmed",
+      "room_day": "T02_20261209"
+    },
+    {
+      "label": "Concurrency — one winning transaction",
+      "booking_id": "ced618dea87442bab525dc0c897c8041",
+      "employee_id": "sara",
+      "room_id": "T02",
+      "start_at": "2026-12-11T07:00:00Z",
+      "end_at": "2026-12-11T08:00:00Z",
+      "status": "confirmed",
+      "room_day": "T02_20261211"
+    }
+  ],
+  "status": "passed",
+  "test_dates": [
+    "2026-12-08",
+    "2026-12-09",
+    "2026-12-10",
+    "2026-12-11"
+  ],
+  "preexisting_records_preserved": true,
+  "final_counts": {
+    "rooms": 10,
+    "employees": 3,
+    "bookings": 14,
+    "room_days": 13
+  }
+}

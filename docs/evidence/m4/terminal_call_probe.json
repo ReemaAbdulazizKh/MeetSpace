@@ -1,0 +1,40 @@
+{
+  "mode": "direct terminal extraction; no FastAPI, browser or Firestore reads/writes",
+  "model_call_count": 1,
+  "elapsed_seconds": 13.918077199952677,
+  "calls": [
+    {
+      "schema": "Extraction",
+      "input_characters": 2741,
+      "options": {
+        "temperature": 0,
+        "num_predict": 600,
+        "num_ctx": 4096
+      },
+      "started_riyadh": "2026-10-22T05:09:12.811036+03:00",
+      "total_duration": 13900907400,
+      "load_duration": 30684900,
+      "prompt_eval_count": 789,
+      "prompt_eval_duration": 5551420000,
+      "eval_count": 71,
+      "eval_duration": 8193162000,
+      "done_reason": "stop",
+      "output": "{\"intent\":\"request\",\"language\":\"en\",\"room_type\":\"training\",\"date\":\"2027-01-30\",\"start_time\":\"10:00\",\"end_time\":\"12:00\",\"end_date\":null,\"attendees\":15,\"selected_room\":null,\"unclear\":[],\"explicit_confirmation\":false}",
+      "wall_seconds": 13.90991870011203
+    }
+  ],
+  "extraction": {
+    "intent": "request",
+    "language": "en",
+    "room_type": "training",
+    "date": "2027-01-30",
+    "start_time": "10:00",
+    "end_time": "12:00",
+    "end_date": null,
+    "attendees": 15,
+    "selected_room": null,
+    "unclear": [],
+    "explicit_confirmation": false,
+    "acknowledgment": null
+  }
+}

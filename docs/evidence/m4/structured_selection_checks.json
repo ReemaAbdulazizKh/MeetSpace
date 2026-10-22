@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "Real Firestore reads, prepared search sessions, no confirmation",
+  "checks": [
+    {
+      "language": "ar",
+      "room_id": "M03",
+      "elapsed_seconds": 1.538696900010109,
+      "model_calls": 0,
+      "status": "offer",
+      "booking": null
+    },
+    {
+      "language": "en",
+      "room_id": "M03",
+      "elapsed_seconds": 2.0492497000377625,
+      "model_calls": 0,
+      "status": "offer",
+      "booking": null
+    }
+  ],
+  "database_unchanged": true,
+  "initial_hash": "775ed749158325cd0171f3c47a6a24a08b7930c136dfbf3acc97ee3beb603ad2",
+  "final_hash": "775ed749158325cd0171f3c47a6a24a08b7930c136dfbf3acc97ee3beb603ad2"
+}

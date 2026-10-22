@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "timezone": "America/Los_Angeles",
+  "read_only": true,
+  "checks": [
+    "existing M2 employee records and isolation",
+    "Riyadh grouping/time despite Los Angeles browser timezone",
+    "admin across employees",
+    "10 actual rooms",
+    "theme/language retain selected details",
+    "responsive 390/768/1440",
+    "calendar clicks never create bookings"
+  ]
+}

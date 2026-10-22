@@ -1,0 +1,869 @@
+{
+  "label": "C",
+  "prompt_path": "docs/prompt_versions/m4_B2_rice.md",
+  "prompt_sha256": "3becbfee8c20044ce4d28b1b3af06ff67cb2a7f94cd2c7ebe0dc95079ef2e2c0",
+  "started_riyadh": "2026-10-22T03:43:01.902594+03:00",
+  "model": "qwen2:7b",
+  "python": "3.10.9",
+  "code_sha256": {
+    "agent": "c6296ef249659cafdb20347d70e5247967fd9100488d686641048229488256bd",
+    "chat_service": "657b9a12c3b649f34f50e269bb1657a2fbec6f9901035dbf2d14e2cb8b9c13a8",
+    "schemas": "85241ebdead3f5a912a2b917103a1371dec68250f5b87c10fc13735bd82e0107",
+    "booking_service": "aacecdcc62fbcea9c2bafc2508564b9c049b752109cf7697659f455568ad67e2"
+  },
+  "endpoint": "FastAPI TestClient POST /api/chat; server HTTP end-to-end, not browser/human time",
+  "scope": "provisional room search / missing-details resolution only; confirmation is separately regression-tested",
+  "fixture": {
+    "fixed_context_time": "2026-10-22T03:32:42+03:00",
+    "typical_date": "2027-01-30",
+    "messy_date": "2027-01-31",
+    "edge_booking_id": "2f9692be654b4aaa872eef497c8e72b3",
+    "edge_room_id": "T02",
+    "edge_date": "2026-11-26",
+    "initial_counts": {
+      "rooms": 10,
+      "employees": 3,
+      "bookings": 11,
+      "room_days": 10
+    },
+    "initial_state_hash": "d20dd1189f16a2bb742e07a6950b1a8ff91a70efdab175eff21a3029bb1d984e"
+  },
+  "initial_state_hash": "d20dd1189f16a2bb742e07a6950b1a8ff91a70efdab175eff21a3029bb1d984e",
+  "trials": [
+    {
+      "scenario": "Typical",
+      "repeat": 1,
+      "turns": [
+        {
+          "input": "I need a training room on 2027-01-30 from 10:00 to 12:00 for 15 people.",
+          "http_status": 200,
+          "elapsed_seconds": 18.092788399895653,
+          "model_calls": [
+            {
+              "schema": "Extraction",
+              "input_characters": 2734,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 9145502000,
+              "load_duration": 6815500,
+              "prompt_eval_count": 782,
+              "prompt_eval_duration": 1340501000,
+              "eval_count": 71,
+              "eval_duration": 7755992000,
+              "done_reason": "stop",
+              "output": "{\"intent\":\"request\",\"language\":\"en\",\"room_type\":\"training\",\"date\":\"2027-01-30\",\"start_time\":\"10:00\",\"end_time\":\"12:00\",\"end_date\":null,\"attendees\":15,\"selected_room\":null,\"unclear\":[],\"explicit_confirmation\":false}",
+              "wall_seconds": 9.163889900082722
+            },
+            {
+              "schema": "NaturalReply",
+              "input_characters": 1231,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 7408482300,
+              "load_duration": 7916600,
+              "prompt_eval_count": 284,
+              "prompt_eval_duration": 2364861000,
+              "eval_count": 48,
+              "eval_duration": 4971564000,
+              "done_reason": "stop",
+              "output": "{\"reply\":\"You have selected a training room for 15 people on January 30, 2027, from 10:00 to 12:00. Please confirm your choice.\"}",
+              "wall_seconds": 7.419733599992469
+            }
+          ],
+          "model_call_count": 2,
+          "response": {
+            "session_id": "de9651a1f6e94de0808f295e2f2aef61",
+            "reply": "These rooms currently fit the capacity and availability checks. Select one; searching does not create a booking.",
+            "status": "options",
+            "draft": {
+              "room_type": "training",
+              "date": "2027-01-30",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "attendees": 15
+            },
+            "missing": [],
+            "options": [
+              {
+                "id": "T02",
+                "name": {
+                  "ar": "قاعة التدريب 02",
+                  "en": "Training Room 02"
+                },
+                "type": "training",
+                "capacity": 15,
+                "alternative_type": false
+              },
+              {
+                "id": "T03",
+                "name": {
+                  "ar": "قاعة التدريب 03",
+                  "en": "Training Room 03"
+                },
+                "type": "training",
+                "capacity": 15,
+                "alternative_type": false
+              },
+              {
+                "id": "T04",
+                "name": {
+                  "ar": "قاعة التدريب 04",
+                  "en": "Training Room 04"
+                },
+                "type": "training",
+                "capacity": 20,
+                "alternative_type": false
+              },
+              {
+                "id": "T05",
+                "name": {
+                  "ar": "قاعة التدريب 05",
+                  "en": "Training Room 05"
+                },
+                "type": "training",
+                "capacity": 30,
+                "alternative_type": false
+              }
+            ],
+            "pending_offer": null,
+            "booking": null,
+            "response_source": "server"
+          },
+          "correct": true,
+          "errors": []
+        }
+      ],
+      "expected_draft": {
+        "room_type": "training",
+        "date": "2027-01-30",
+        "start_time": "10:00",
+        "end_time": "12:00",
+        "attendees": 15
+      },
+      "correct": true,
+      "errors": [],
+      "elapsed_seconds": 18.092788399895653,
+      "model_call_count": 2,
+      "conversation_turns": 1
+    },
+    {
+      "scenario": "Messy",
+      "repeat": 1,
+      "turns": [
+        {
+          "input": "أحتاج قاعة تدريب يوم 2027-01-31 الساعة 10 صباحًا",
+          "http_status": 200,
+          "elapsed_seconds": 8.6172041001264,
+          "model_calls": [
+            {
+              "schema": "Extraction",
+              "input_characters": 2711,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 8247202200,
+              "load_duration": 14999200,
+              "prompt_eval_count": 770,
+              "prompt_eval_duration": 1069166999,
+              "eval_count": 66,
+              "eval_duration": 7115095000,
+              "done_reason": "stop",
+              "output": "{\"intent\":\"request\",\"language\":\"ar\",\"room_type\":\"training\",\"date\":\"2027-01-31\",\"start_time\":\"10:00\",\"end_time\":null,\"end_date\":null,\"attendees\":null,\"selected_room\":null,\"unclear\":[],\"explicit_confirmation\":false}",
+              "wall_seconds": 8.261424300028011
+            }
+          ],
+          "model_call_count": 1,
+          "response": {
+            "session_id": "e7c896cf76b144f1a46cd7f18457afa5",
+            "reply": "أحتاج هذه التفاصيل فقط: وقت النهاية مع صباحًا/مساءً، عدد الحضور",
+            "status": "missing",
+            "draft": {
+              "room_type": "training",
+              "date": "2027-01-31",
+              "start_time": "10:00"
+            },
+            "missing": [
+              "end_time",
+              "attendees"
+            ],
+            "options": [],
+            "pending_offer": null,
+            "booking": null,
+            "response_source": "server"
+          },
+          "correct": true,
+          "errors": []
+        },
+        {
+          "input": "عدد الحضور 15 شخصًا والنهاية الساعة 12 ظهرًا",
+          "http_status": 200,
+          "elapsed_seconds": 17.704825000138953,
+          "model_calls": [
+            {
+              "schema": "Extraction",
+              "input_characters": 2955,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 10976774000,
+              "load_duration": 7905700,
+              "prompt_eval_count": 868,
+              "prompt_eval_duration": 4175754000,
+              "eval_count": 62,
+              "eval_duration": 6773944000,
+              "done_reason": "stop",
+              "output": "{\"intent\":\"update\",\"language\":\"ar\",\"room_type\":null,\"date\":null,\"start_time\":\"10:00\",\"end_time\":\"12:00\",\"end_date\":null,\"attendees\":15,\"selected_room\":null,\"unclear\":[],\"explicit_confirmation\":false}",
+              "wall_seconds": 10.979370800079778
+            },
+            {
+              "schema": "NaturalReply",
+              "input_characters": 1164,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 5202738100,
+              "load_duration": 8397100,
+              "prompt_eval_count": 276,
+              "prompt_eval_duration": 2324419000,
+              "eval_count": 27,
+              "eval_duration": 2800338000,
+              "done_reason": "stop",
+              "output": "{\"reply\":\"هذا خيارات مستوفية للسعة والتوفر الآن. يرجى اختيار القاعة.\"}",
+              "wall_seconds": 5.230857999995351
+            }
+          ],
+          "model_call_count": 2,
+          "response": {
+            "session_id": "e7c896cf76b144f1a46cd7f18457afa5",
+            "reply": "هذا خيارات مستوفية للسعة والتوفر الآن. يرجى اختيار القاعة.\nهذه خيارات مستوفية للسعة والتوفر الآن. اختاري قاعة؛ البحث لا ينشئ حجزًا.",
+            "status": "options",
+            "draft": {
+              "room_type": "training",
+              "date": "2027-01-31",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "attendees": 15
+            },
+            "missing": [],
+            "options": [
+              {
+                "id": "T02",
+                "name": {
+                  "ar": "قاعة التدريب 02",
+                  "en": "Training Room 02"
+                },
+                "type": "training",
+                "capacity": 15,
+                "alternative_type": false
+              },
+              {
+                "id": "T03",
+                "name": {
+                  "ar": "قاعة التدريب 03",
+                  "en": "Training Room 03"
+                },
+                "type": "training",
+                "capacity": 15,
+                "alternative_type": false
+              },
+              {
+                "id": "T04",
+                "name": {
+                  "ar": "قاعة التدريب 04",
+                  "en": "Training Room 04"
+                },
+                "type": "training",
+                "capacity": 20,
+                "alternative_type": false
+              },
+              {
+                "id": "T05",
+                "name": {
+                  "ar": "قاعة التدريب 05",
+                  "en": "Training Room 05"
+                },
+                "type": "training",
+                "capacity": 30,
+                "alternative_type": false
+              }
+            ],
+            "pending_offer": null,
+            "booking": null,
+            "response_source": "ollama"
+          },
+          "correct": true,
+          "errors": []
+        }
+      ],
+      "expected_draft": {
+        "room_type": "training",
+        "date": "2027-01-31",
+        "start_time": "10:00",
+        "end_time": "12:00",
+        "attendees": 15
+      },
+      "correct": true,
+      "errors": [],
+      "elapsed_seconds": 26.322029100265354,
+      "model_call_count": 3,
+      "conversation_turns": 2
+    },
+    {
+      "scenario": "Edge",
+      "repeat": 1,
+      "turns": [
+        {
+          "input": "I need training room T02 on 2026-11-26 from 10:00 to 12:00 for 15 people.",
+          "http_status": 200,
+          "elapsed_seconds": 20.102405400015414,
+          "model_calls": [
+            {
+              "schema": "Extraction",
+              "input_characters": 2736,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 10006298300,
+              "load_duration": 3924800,
+              "prompt_eval_count": 784,
+              "prompt_eval_duration": 2032722000,
+              "eval_count": 73,
+              "eval_duration": 7911347000,
+              "done_reason": "stop",
+              "output": "{\"intent\":\"request\",\"language\":\"en\",\"room_type\":\"training\",\"date\":\"2026-11-26\",\"start_time\":\"10:00\",\"end_time\":\"12:00\",\"end_date\":null,\"attendees\":15,\"selected_room\":\"T02\",\"unclear\":[],\"explicit_confirmation\":false}",
+              "wall_seconds": 10.017723700031638
+            },
+            {
+              "schema": "NaturalReply",
+              "input_characters": 1295,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 8681861900,
+              "load_duration": 14397900,
+              "prompt_eval_count": 298,
+              "prompt_eval_duration": 2711921000,
+              "eval_count": 57,
+              "eval_duration": 5894227000,
+              "done_reason": "stop",
+              "output": "{\"reply\":\"I'm sorry, but room T02 is not available on November 26th, 2026, from 10:00 to 12:00 for 15 people. Please select another room or time.\"}",
+              "wall_seconds": 8.685118899913505
+            }
+          ],
+          "model_call_count": 2,
+          "response": {
+            "session_id": "a30e3e5fa4d646a1ba2a6b741d1c3eb6",
+            "reply": "The requested room is unsuitable or unavailable for the slot. These rooms currently fit the capacity and availability checks. Select one; searching does not create a booking.",
+            "status": "options",
+            "draft": {
+              "room_type": "training",
+              "date": "2026-11-26",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "attendees": 15,
+              "selected_room": "T02"
+            },
+            "missing": [],
+            "options": [
+              {
+                "id": "T03",
+                "name": {
+                  "ar": "قاعة التدريب 03",
+                  "en": "Training Room 03"
+                },
+                "type": "training",
+                "capacity": 15,
+                "alternative_type": false
+              },
+              {
+                "id": "T04",
+                "name": {
+                  "ar": "قاعة التدريب 04",
+                  "en": "Training Room 04"
+                },
+                "type": "training",
+                "capacity": 20,
+                "alternative_type": false
+              },
+              {
+                "id": "T05",
+                "name": {
+                  "ar": "قاعة التدريب 05",
+                  "en": "Training Room 05"
+                },
+                "type": "training",
+                "capacity": 30,
+                "alternative_type": false
+              }
+            ],
+            "pending_offer": null,
+            "booking": null,
+            "response_source": "server"
+          },
+          "correct": true,
+          "errors": []
+        }
+      ],
+      "expected_draft": {
+        "room_type": "training",
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": "12:00",
+        "attendees": 15,
+        "selected_room": "T02"
+      },
+      "correct": true,
+      "errors": [],
+      "elapsed_seconds": 20.102405400015414,
+      "model_call_count": 2,
+      "conversation_turns": 1
+    },
+    {
+      "scenario": "Typical",
+      "repeat": 2,
+      "turns": [
+        {
+          "input": "I need a training room on 2027-01-30 from 10:00 to 12:00 for 15 people.",
+          "http_status": 200,
+          "elapsed_seconds": 18.44175670016557,
+          "model_calls": [
+            {
+              "schema": "Extraction",
+              "input_characters": 2734,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 9489174900,
+              "load_duration": 9431000,
+              "prompt_eval_count": 782,
+              "prompt_eval_duration": 1317548000,
+              "eval_count": 71,
+              "eval_duration": 8109864000,
+              "done_reason": "stop",
+              "output": "{\"intent\":\"request\",\"language\":\"en\",\"room_type\":\"training\",\"date\":\"2027-01-30\",\"start_time\":\"10:00\",\"end_time\":\"12:00\",\"end_date\":null,\"attendees\":15,\"selected_room\":null,\"unclear\":[],\"explicit_confirmation\":false}",
+              "wall_seconds": 9.511135600041598
+            },
+            {
+              "schema": "NaturalReply",
+              "input_characters": 1231,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 7532355200,
+              "load_duration": 12523700,
+              "prompt_eval_count": 284,
+              "prompt_eval_duration": 2301764000,
+              "eval_count": 48,
+              "eval_duration": 5141859000,
+              "done_reason": "stop",
+              "output": "{\"reply\":\"You have selected a training room for 15 people on January 30, 2027, from 10:00 to 12:00. Please confirm your choice.\"}",
+              "wall_seconds": 7.535644100047648
+            }
+          ],
+          "model_call_count": 2,
+          "response": {
+            "session_id": "b18ed8ab71234d72be6f6c02ee17a5ed",
+            "reply": "These rooms currently fit the capacity and availability checks. Select one; searching does not create a booking.",
+            "status": "options",
+            "draft": {
+              "room_type": "training",
+              "date": "2027-01-30",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "attendees": 15
+            },
+            "missing": [],
+            "options": [
+              {
+                "id": "T02",
+                "name": {
+                  "ar": "قاعة التدريب 02",
+                  "en": "Training Room 02"
+                },
+                "type": "training",
+                "capacity": 15,
+                "alternative_type": false
+              },
+              {
+                "id": "T03",
+                "name": {
+                  "ar": "قاعة التدريب 03",
+                  "en": "Training Room 03"
+                },
+                "type": "training",
+                "capacity": 15,
+                "alternative_type": false
+              },
+              {
+                "id": "T04",
+                "name": {
+                  "ar": "قاعة التدريب 04",
+                  "en": "Training Room 04"
+                },
+                "type": "training",
+                "capacity": 20,
+                "alternative_type": false
+              },
+              {
+                "id": "T05",
+                "name": {
+                  "ar": "قاعة التدريب 05",
+                  "en": "Training Room 05"
+                },
+                "type": "training",
+                "capacity": 30,
+                "alternative_type": false
+              }
+            ],
+            "pending_offer": null,
+            "booking": null,
+            "response_source": "server"
+          },
+          "correct": true,
+          "errors": []
+        }
+      ],
+      "expected_draft": {
+        "room_type": "training",
+        "date": "2027-01-30",
+        "start_time": "10:00",
+        "end_time": "12:00",
+        "attendees": 15
+      },
+      "correct": true,
+      "errors": [],
+      "elapsed_seconds": 18.44175670016557,
+      "model_call_count": 2,
+      "conversation_turns": 1
+    },
+    {
+      "scenario": "Messy",
+      "repeat": 2,
+      "turns": [
+        {
+          "input": "أحتاج قاعة تدريب يوم 2027-01-31 الساعة 10 صباحًا",
+          "http_status": 200,
+          "elapsed_seconds": 9.237361000152305,
+          "model_calls": [
+            {
+              "schema": "Extraction",
+              "input_characters": 2711,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 8944377400,
+              "load_duration": 14573400,
+              "prompt_eval_count": 770,
+              "prompt_eval_duration": 1093534000,
+              "eval_count": 66,
+              "eval_duration": 7775806000,
+              "done_reason": "stop",
+              "output": "{\"intent\":\"request\",\"language\":\"ar\",\"room_type\":\"training\",\"date\":\"2027-01-31\",\"start_time\":\"10:00\",\"end_time\":null,\"end_date\":null,\"attendees\":null,\"selected_room\":null,\"unclear\":[],\"explicit_confirmation\":false}",
+              "wall_seconds": 8.942478699842468
+            }
+          ],
+          "model_call_count": 1,
+          "response": {
+            "session_id": "dcf54d2eacb04784b647c01aa6294036",
+            "reply": "أحتاج هذه التفاصيل فقط: وقت النهاية مع صباحًا/مساءً، عدد الحضور",
+            "status": "missing",
+            "draft": {
+              "room_type": "training",
+              "date": "2027-01-31",
+              "start_time": "10:00"
+            },
+            "missing": [
+              "end_time",
+              "attendees"
+            ],
+            "options": [],
+            "pending_offer": null,
+            "booking": null,
+            "response_source": "server"
+          },
+          "correct": true,
+          "errors": []
+        },
+        {
+          "input": "عدد الحضور 15 شخصًا والنهاية الساعة 12 ظهرًا",
+          "http_status": 200,
+          "elapsed_seconds": 18.207554999971762,
+          "model_calls": [
+            {
+              "schema": "Extraction",
+              "input_characters": 2955,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 11364149200,
+              "load_duration": 8342900,
+              "prompt_eval_count": 868,
+              "prompt_eval_duration": 4406676000,
+              "eval_count": 62,
+              "eval_duration": 6927971000,
+              "done_reason": "stop",
+              "output": "{\"intent\":\"update\",\"language\":\"ar\",\"room_type\":null,\"date\":null,\"start_time\":\"10:00\",\"end_time\":\"12:00\",\"end_date\":null,\"attendees\":15,\"selected_room\":null,\"unclear\":[],\"explicit_confirmation\":false}",
+              "wall_seconds": 11.367017799988389
+            },
+            {
+              "schema": "NaturalReply",
+              "input_characters": 1164,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 5391524200,
+              "load_duration": 8717200,
+              "prompt_eval_count": 276,
+              "prompt_eval_duration": 2375091000,
+              "eval_count": 27,
+              "eval_duration": 2944359000,
+              "done_reason": "stop",
+              "output": "{\"reply\":\"هذا خيارات مستوفية للسعة والتوفر الآن. يرجى اختيار القاعة.\"}",
+              "wall_seconds": 5.393121500033885
+            }
+          ],
+          "model_call_count": 2,
+          "response": {
+            "session_id": "dcf54d2eacb04784b647c01aa6294036",
+            "reply": "هذا خيارات مستوفية للسعة والتوفر الآن. يرجى اختيار القاعة.\nهذه خيارات مستوفية للسعة والتوفر الآن. اختاري قاعة؛ البحث لا ينشئ حجزًا.",
+            "status": "options",
+            "draft": {
+              "room_type": "training",
+              "date": "2027-01-31",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "attendees": 15
+            },
+            "missing": [],
+            "options": [
+              {
+                "id": "T02",
+                "name": {
+                  "ar": "قاعة التدريب 02",
+                  "en": "Training Room 02"
+                },
+                "type": "training",
+                "capacity": 15,
+                "alternative_type": false
+              },
+              {
+                "id": "T03",
+                "name": {
+                  "ar": "قاعة التدريب 03",
+                  "en": "Training Room 03"
+                },
+                "type": "training",
+                "capacity": 15,
+                "alternative_type": false
+              },
+              {
+                "id": "T04",
+                "name": {
+                  "ar": "قاعة التدريب 04",
+                  "en": "Training Room 04"
+                },
+                "type": "training",
+                "capacity": 20,
+                "alternative_type": false
+              },
+              {
+                "id": "T05",
+                "name": {
+                  "ar": "قاعة التدريب 05",
+                  "en": "Training Room 05"
+                },
+                "type": "training",
+                "capacity": 30,
+                "alternative_type": false
+              }
+            ],
+            "pending_offer": null,
+            "booking": null,
+            "response_source": "ollama"
+          },
+          "correct": true,
+          "errors": []
+        }
+      ],
+      "expected_draft": {
+        "room_type": "training",
+        "date": "2027-01-31",
+        "start_time": "10:00",
+        "end_time": "12:00",
+        "attendees": 15
+      },
+      "correct": true,
+      "errors": [],
+      "elapsed_seconds": 27.444916000124067,
+      "model_call_count": 3,
+      "conversation_turns": 2
+    },
+    {
+      "scenario": "Edge",
+      "repeat": 2,
+      "turns": [
+        {
+          "input": "I need training room T02 on 2026-11-26 from 10:00 to 12:00 for 15 people.",
+          "http_status": 200,
+          "elapsed_seconds": 20.8957649001386,
+          "model_calls": [
+            {
+              "schema": "Extraction",
+              "input_characters": 2736,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 10631550900,
+              "load_duration": 18467400,
+              "prompt_eval_count": 784,
+              "prompt_eval_duration": 2152903000,
+              "eval_count": 73,
+              "eval_duration": 8408202999,
+              "done_reason": "stop",
+              "output": "{\"intent\":\"request\",\"language\":\"en\",\"room_type\":\"training\",\"date\":\"2026-11-26\",\"start_time\":\"10:00\",\"end_time\":\"12:00\",\"end_date\":null,\"attendees\":15,\"selected_room\":\"T02\",\"unclear\":[],\"explicit_confirmation\":false}",
+              "wall_seconds": 10.63117940002121
+            },
+            {
+              "schema": "NaturalReply",
+              "input_characters": 1295,
+              "options": {
+                "temperature": 0,
+                "num_predict": 600,
+                "num_ctx": 4096
+              },
+              "started_riyadh": "2026-10-22T03:32:42+03:00",
+              "total_duration": 8769080200,
+              "load_duration": 8116000,
+              "prompt_eval_count": 298,
+              "prompt_eval_duration": 2843091000,
+              "eval_count": 57,
+              "eval_duration": 5862182000,
+              "done_reason": "stop",
+              "output": "{\"reply\":\"I'm sorry, but room T02 is not available on November 26th, 2026, from 10:00 to 12:00 for 15 people. Please select another room or time.\"}",
+              "wall_seconds": 8.775190100073814
+            }
+          ],
+          "model_call_count": 2,
+          "response": {
+            "session_id": "be71d223aab849dc821647fc6d132cc6",
+            "reply": "The requested room is unsuitable or unavailable for the slot. These rooms currently fit the capacity and availability checks. Select one; searching does not create a booking.",
+            "status": "options",
+            "draft": {
+              "room_type": "training",
+              "date": "2026-11-26",
+              "start_time": "10:00",
+              "end_time": "12:00",
+              "attendees": 15,
+              "selected_room": "T02"
+            },
+            "missing": [],
+            "options": [
+              {
+                "id": "T03",
+                "name": {
+                  "ar": "قاعة التدريب 03",
+                  "en": "Training Room 03"
+                },
+                "type": "training",
+                "capacity": 15,
+                "alternative_type": false
+              },
+              {
+                "id": "T04",
+                "name": {
+                  "ar": "قاعة التدريب 04",
+                  "en": "Training Room 04"
+                },
+                "type": "training",
+                "capacity": 20,
+                "alternative_type": false
+              },
+              {
+                "id": "T05",
+                "name": {
+                  "ar": "قاعة التدريب 05",
+                  "en": "Training Room 05"
+                },
+                "type": "training",
+                "capacity": 30,
+                "alternative_type": false
+              }
+            ],
+            "pending_offer": null,
+            "booking": null,
+            "response_source": "server"
+          },
+          "correct": true,
+          "errors": []
+        }
+      ],
+      "expected_draft": {
+        "room_type": "training",
+        "date": "2026-11-26",
+        "start_time": "10:00",
+        "end_time": "12:00",
+        "attendees": 15,
+        "selected_room": "T02"
+      },
+      "correct": true,
+      "errors": [],
+      "elapsed_seconds": 20.8957649001386,
+      "model_call_count": 2,
+      "conversation_turns": 1
+    }
+  ],
+  "status": "passed",
+  "warmup": {
+    "excluded_from_comparison": true,
+    "wall_seconds": 1.0660766998771578,
+    "total_duration": 1047449100,
+    "load_duration": 9464200,
+    "prompt_eval_duration": 138294000,
+    "eval_duration": 871233000,
+    "eval_count": 9
+  },
+  "final_state_hash": "d20dd1189f16a2bb742e07a6950b1a8ff91a70efdab175eff21a3029bb1d984e",
+  "database_unchanged": true,
+  "finished_riyadh": "2026-10-22T03:45:16.619697+03:00"
+}

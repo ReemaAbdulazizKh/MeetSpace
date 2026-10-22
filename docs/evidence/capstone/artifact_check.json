@@ -1,0 +1,51 @@
+{
+  "pdf_pages": 27,
+  "expected_pages": 27,
+  "page_size": [
+    960.0,
+    540.0
+  ],
+  "page_text_lengths": [
+    459,
+    804,
+    688,
+    795,
+    632,
+    812,
+    779,
+    735,
+    730,
+    358,
+    296,
+    809,
+    860,
+    1014,
+    857,
+    815,
+    756,
+    800,
+    588,
+    817,
+    916,
+    833,
+    873,
+    934,
+    583,
+    959,
+    363
+  ],
+  "pptx_slides": 27,
+  "editable_text_runs": 658,
+  "embedded_images": 6,
+  "sha256": {
+    "pptx": "12d25cbafc5ba3c380dd296db02e1211d051810ec7c7c59227eed42271fcb35e",
+    "pdf": "f52bbe1513bef94cc85f0d22d93840c8d0c5a2e8e62c5b98207f7eda9a6cecf8"
+  },
+  "total_reduction_percent": 68.79,
+  "pdf_numbers_present": {
+    "68.79": true,
+    "12:17": true,
+    "3:50": true,
+    "8:27": true
+  }
+}
