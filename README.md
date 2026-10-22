@@ -8,6 +8,13 @@
 
 React/Vite + FastAPI room-booking assistant using Qwen3.8 27B through Groq in the hosted configuration, with server-side validation and Firebase Firestore persistence. Local Ollama remains an optional provider. This is an educational demo with fictional data; role switching is not individual authentication.
 
+## وثائق المشروع — Project Documents
+
+- [BRD — متطلبات الأعمال](docs/MeetSpace_BRD.md)
+- [SPEC — المواصفات التقنية](docs/MeetSpace_SPEC.md)
+- [AGENTS.md — تعليمات وكيل التطوير](AGENTS.md)
+- [تعليمات وكيل الحجز — Booking Agent Prompt](backend/prompts/booking_agent.md)
+
 ## Project folders
 
 - backend/: runtime API, agent, booking rules and Firestore access.

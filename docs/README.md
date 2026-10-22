@@ -8,8 +8,10 @@
 | تحسينات الأوامر والأداء | [سجل التحسين](Prompt_Engineering_Log.md) |
 | الأدلة الخام للاختبارات | [evidence](evidence/README.md) |
 | نسخ الأوامر والكود السابقة | [archive](archive/README.md) |
-| التسليم الختامي ومطابقة سدايا | [لوحة المشروع](Final_Capstone_Board.md)، [قائمة الأدلة](../MeetSpace_Evidence_Checklist.md)، [PowerPoint](../MeetSpace_Final_Presentation.pptx)، [PDF](../MeetSpace_Final_Presentation.pdf) |
-| مصدر العرض وفحص إخراجه | [presentation](presentation/)، [أدلة التسليم](evidence/capstone/) |
+| التسليم الختامي ومطابقة سدايا | [لوحة المشروع](Final_Capstone_Board.md)، [قائمة الأدلة](../MeetSpace_Evidence_Checklist.md) |
+| صور التطبيق والأدلة | [أدلة التسليم](evidence/capstone/) |
+
+ملفات العرض التقديمي ومصادر إنشائه وصور الشرائح محفوظة محليًا فقط، وأُزيلت من النسخة الحالية للمستودع بطلب صاحبة المشروع. الإشارات إليها في تقارير التسليم السابقة تاريخية وليست ملفات مرفقة على GitHub.
 
 تقارير المراحل تاريخية؛ تاريخها يحدد الحالة التي تصفها. نتائج قياسات الإنتاجية البشرية منفصلة عن مقاييس استدلال النموذج والاختبارات الآلية.
 

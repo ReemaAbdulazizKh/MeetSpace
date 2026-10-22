@@ -7,6 +7,14 @@
 presentation_source_pack/
 MeetSpace_Presentation_Source_Pack.zip
 /backend/checks/
+/MeetSpace_Final_Presentation.pptx
+/MeetSpace_Final_Presentation.pdf
+/docs/presentation/
+/docs/evidence/capstone/rendered/
+/docs/evidence/capstone/contact_*.jpg
+/docs/evidence/capstone/layout_check.json
+/docs/evidence/capstone/artifact_check.json
+/docs/evidence/capstone/delivery_review.json
 .secrets/
 .venv/
 __pycache__/
